@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VFX & Crowd TD Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            scroll-behavior: smooth;
+        }
+        .code-font {
+            font-family: 'Source Code Pro', monospace;
+        }
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #4f46e5, #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(79, 70, 229, 0.5), transparent);
+        }
+        .glow {
+            box-shadow: 0 0 15px rgba(79, 70, 229, 0.5);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-gray-900 bg-opacity-90 backdrop-blur-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold code-font gradient-text">Portfolio</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-300 hover:text-white transition">Home</a>
+                    <a href="#projects" class="text-gray-300 hover:text-white transition">Projects</a>
+                    <a href="#skills" class="text-gray-300 hover:text-white transition">Skills</a>
+                    <a href="#about" class="text-gray-300 hover:text-white transition">About</a>
+                    <a href="#contact" class="text-gray-300 hover:text-white transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-gray-900 bg-opacity-95 z-40 pt-16">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="#home" class="text-2xl text-gray-300 hover:text-white transition">Home</a>
+            <a href="#projects" class="text-2xl text-gray-300 hover:text-white transition">Projects</a>
+            <a href="#skills" class="text-2xl text-gray-300 hover:text-white transition">Skills</a>
+            <a href="#about" class="text-2xl text-gray-300 hover:text-white transition">About</a>
+            <a href="#contact" class="text-2xl text-gray-300 hover:text-white transition">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="gradient-text">Milin Shah</span></h1>
+                <h2 class="text-xl md:text-2xl text-gray-400 mb-6">Effects & Crowd <span class="border-b-2 border-indigo-500">Technical Director</span></h2>
+                <p class="text-gray-300 mb-8 max-w-lg">
+                    Specializing in complex visual effects and large-scale crowd simulations for feature Films and VFX Flims.
+                    Passionate about pushing technical boundaries to create stunning visual experiences.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#projects" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 rounded-md text-white transition">View Work</a>
+                    <a href="#contact" class="px-6 py-3 border border-gray-600 hover:border-indigo-400 rounded-md text-gray-300 hover:text-white transition">Contact Me</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative w-full max-w-md">
+                    <div class="absolute inset-0 bg-indigo-600 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
+                    <img src="E:\Website\Portfolio-Website\Images\Profile.png" alt="Portrait of a technical director in a studio environment with complex visual effects rendering on multiple monitors" class="relative rounded-full w-full max-w-md border-4 border-gray-700 shadow-xl" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Featured <span class="gradient-text">Projects</span></h2>
+            <p class="text-gray-400 max-w-2xl mx-auto">A showcase of my work in visual effects and crowd simulation across various productions</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project 1 -->
+            <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg glow hover:glow-md">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="E:\Website\Portfolio-Website\Images\nimona.png" alt="Large-scale fantasy battle scene with thousands of AI-driven characters clashing, magical effects and dynamic lighting" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold">Nimona</h3>
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">2023</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Massive crowd simulation with battle Crowd , stadium Crowd.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">Houdini</span>
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">Maya</span>
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">Python</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg glow hover:glow-md">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="E:\Website\Portfolio-Website\Images\masters_of_the_airs.png" alt="Destruction simulation showing a collapsing skyscraper with realistic physics, debris and dust effects" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold">Masters Of The Air</h3>
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">2023</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Procedural plan destruction system for large-scale Battle ,Large scale battle Crowd.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">Houdini</span>
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">VEX</span>
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">C++</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg glow hover:glow-md">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="E:\Website\Portfolio-Website\Images\Furiosa.png" alt="Fantasy creature made of fire and magic particles with dynamic simulation and secondary motion effects" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold">Furiosa: A Mad Max Saga</h3>
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">2024</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Developing procedural crowd setups, R&D and simulations, moreover working with cross-site departments(team) to ensure setup is efficient and able to meet the creative brief.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">Houdini</span>
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">RenderMan</span>
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">Python</span>
+                    </div>
+                </div>
+            </div>
+			
+			<!-- Project 4 -->
+            <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg glow hover:glow-md">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="E:\Website\Portfolio-Website\Images\DUNE_2.png" alt="Fantasy creature made of fire and magic particles with dynamic simulation and secondary motion effects" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold">Dune: Part Two</h3>
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">2024</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">R&D for building complex war setup for multiple sequence.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">Houdini</span>
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">RenderMan</span>
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">Python</span>
+                    </div>
+                </div>
+            </div>
+			
+			<!-- Project 5 -->
+            <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg glow hover:glow-md">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="E:\Website\Portfolio-Website\Images\The_Traveller.png" alt="Fantasy creature made of fire and magic particles with dynamic simulation and secondary motion effects" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold">The Traveller</h3>
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">2024</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Worked on complicated and hero shots</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">Houdini</span>
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">RenderMan</span>
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">Python</span>
+                    </div>
+                </div>
+            </div>
+			
+			<!-- Project 6 -->
+            <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg glow hover:glow-md">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="E:\Website\Portfolio-Website\Images\LordOfTheRings.png" alt="Fantasy creature made of fire and magic particles with dynamic simulation and secondary motion effects" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold">The Lord of the Rings: The War of the Rohirrim</h3>
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">2024</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Developing procedural crowd setups, R&D and simulations, moreover working with cross-site departments(team) to ensure setup is efficient and able to meet the creative brief.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">Houdini</span>
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">RenderMan</span>
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">Python</span>
+                    </div>
+                </div>
+            </div>
+			
+			<!-- Project 7 -->
+            <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg glow hover:glow-md">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="E:\Website\Portfolio-Website\Images\skyForce.png" alt="Fantasy creature made of fire and magic particles with dynamic simulation and secondary motion effects" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold">Sky Force</h3>
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">2025</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Developing procedural crowd setups, R&D and simulations, moreover working with cross-site departments(team) to ensure setup is efficient and able to meet the creative brief.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">Houdini</span>
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">RenderMan</span>
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">Python</span>
+                    </div>
+                </div>
+            </div>
+			
+			<!-- Project 8 -->
+            <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg glow hover:glow-md">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="E:\Website\Portfolio-Website\Images\mickey17.png" alt="Fantasy creature made of fire and magic particles with dynamic simulation and secondary motion effects" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold">Mickey17</h3>
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">2025</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Developing procedural crowd setups, R&D and simulations, moreover working with cross-site departments(team) to ensure setup is efficient and able to meet the creative brief.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">Houdini</span>
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">RenderMan</span>
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">Python</span>
+                    </div>
+                </div>
+            </div>
+			
+			
+			
+			<!-- Project 9 -->
+            <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg glow hover:glow-md">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="E:\Website\Portfolio-Website\Images\Ramayana.png" alt="Fantasy creature made of fire and magic particles with dynamic simulation and secondary motion effects" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold">Ramayana</h3>
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">2026</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Developing procedural crowd setups, R&D and simulations, moreover working with cross-site departments(team) to ensure setup is efficient and able to meet the creative brief.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">Houdini</span>
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">RenderMan</span>
+                        <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">Python</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Technical <span class="gradient-text">Expertise</span></h2>
+            <p class="text-gray-400 max-w-2xl mx-auto">The tools and technologies I work with to create stunning effects and simulations</p>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            <!-- Skill 1 -->
+            <div class="p-6 bg-gray-800 rounded-lg flex flex-col items-center justify-center group">
+                <div class="w-16 h-16 mb-4 bg-gray-700 rounded-full flex items-center justify-center group-hover:bg-indigo-600 transition">
+                    <span class="text-2xl font-bold code-font">H</span>
+                </div>
+                <span class="font-medium">Houdini</span>
+                <span class="text-xs text-gray-400 mt-1">FX & Crowds</span>
+            </div>
+            
+            <!-- Skill 2 -->
+            <div class="p-6 bg-gray-800 rounded-lg flex flex-col items-center justify-center group">
+                <div class="w-16 h-16 mb-4 bg-gray-700 rounded-full flex items-center justify-center group-hover:bg-indigo-600 transition">
+                    <span class="text-2xl font-bold code-font">M</span>
+                </div>
+                <span class="font-medium">Maya</span>
+                <span class="text-xs text-gray-400 mt-1">Animation</span>
+            </div>
+            
+            <!-- Skill 3 -->
+            <div class="p-6 bg-gray-800 rounded-lg flex flex-col items-center justify-center group">
+                <div class="w-16 h-16 mb-4 bg-gray-700 rounded-full flex items-center justify-center group-hover:bg-indigo-600 transition">
+                    <span class="text-2xl font-bold code-font">P</span>
+                </div>
+                <span class="font-medium">Python</span>
+                <span class="text-xs text-gray-400 mt-1">Tooling</span>
+            </div>
+            
+            <!-- Skill 4 -->
+            <div class="p-6 bg-gray-800 rounded-lg flex flex-col items-center justify-center group">
+                <div class="w-16 h-16 mb-4 bg-gray-700 rounded-full flex items-center justify-center group-hover:bg-indigo-600 transition">
+                    <span class="text-2xl font-bold code-font">C</span>
+                </div>
+                <span class="font-medium">C++</span>
+                <span class="text-xs text-gray-400 mt-1">Plugins</span>
+            </div>
+            
+            <!-- Skill 5 -->
+            <div class="p-6 bg-gray-800 rounded-lg flex flex-col items-center justify-center group">
+                <div class="w-16 h-16 mb-4 bg-gray-700 rounded-full flex items-center justify-center group-hover:bg-indigo-600 transition">
+                    <span class="text-2xl font-bold code-font">V</span>
+                </div>
+                <span class="font-medium">VEX</span>
+                <span class="text-xs text-gray-400 mt-1">Procedural</span>
+            </div>
+            
+            <!-- Skill 6 -->
+            <div class="p-6 bg-gray-800 rounded-lg flex flex-col items-center justify-center group">
+                <div class="w-16 h-16 mb-4 bg-gray-700 rounded-full flex items-center justify-center group-hover:bg-indigo-600 transition">
+                    <span class="text-2xl font-bold code-font">U</span>
+                </div>
+                <span class="font-medium">Unreal</span>
+                <span class="text-xs text-gray-400 mt-1">Real-time FX</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">About <span class="gradient-text">Me</span></h2>
+                <p class="text-gray-300 mb-4">
+                    With over 3.5 years in the visual effects industry, I specialize in creating complex effects and crowd simulations for feature films,television and Movies. My approach combines technical precision with artistic vision to deliver stunning visual experiences.
+                </p>
+                <p class="text-gray-300 mb-4">
+                    As a Technical Director, I focus on developing robust systems that scale effectively while maintaining creative flexibility. I'm passionate about optimizing workflows and mentoring team members in technical best practices.
+                </p>
+                <p class="text-gray-300 mb-6">
+                    When I'm not simulating destruction or managing thousands of agents, you can find me exploring new rendering techniques or contributing to open-source projects in the VFX community.
+                </p>
+                <div class="mt-8">
+                    <a href="https://drive.google.com/file/d/1h_jvBJ-zZ2yF2ZOLgTQ71EA2A0sLEviy/view?usp=sharing" class="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition">
+                        <span class="mr-2">Download Full Resume</span>
+                        <svg class="w13 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 bg-gray-800 rounded-xl p-8 glow">
+                <h3 class="text-xl font-bold mb-6">Production Experience</h3>
+                
+                <div class="space-y-6">
+                    <!-- Experience 1 -->
+                    <div class="flex">
+                        <div class="mr-4 flex flex-col items-center">
+                            <div class="w-3 h-3 bg-indigo-500 rounded-full mt-2"></div>
+                            <div class="w-px h-full bg-gray-600"></div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Senior Crowd/FX TD</h4>
+                            <p class="text-gray-400 text-sm mb-1">DNEG Studio • 2022(DEC) - Present</p>
+                            <p class="text-gray-300 text-sm">
+                                Led crowd simulation team on multiple AAA film projects, developing custom tools for agent behavior and large-scale battle sequences.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience 2 -->
+                    <div class="flex">
+                        <div class="mr-4 flex flex-col items-center">
+                            <div class="w-3 h-3 bg-indigo-500 rounded-full mt-2"></div>
+                            <div class="w-px h-full bg-gray-600"></div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Junior Crowd/FX TD</h4>
+                            <p class="text-gray-400 text-sm mb-1">DNEG Studio • 2022(JUN) - 2022(NOV)</p>
+                            <p class="text-gray-300 text-sm">
+                                Created dynamic effects systems for animated features, specializing in fluid, and destruction simulations.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience 3 -->
+                    <div class="flex">
+                        <div class="mr-4 flex flex-col items-center">
+                            <div class="w-3 h-3 bg-indigo-500 rounded-full mt-2"></div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Crowd/FX Tranee</h4>
+                            <p class="text-gray-400 text-sm mb-1">DNEG Studio • 2022(JAN) - 2022(JUN)</p>
+                            <p class="text-gray-300 text-sm">
+                                Implemented real-time effects using particle systems and shaders, contributing to multiple game titles across platforms.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6 text-center">
+            <span class="gradient-text">04.</span> Get In Touch
+        </h2>
+        <p class="text-lg mb-12 text-[#8892b0] text-center max-w-2xl mx-auto">
+            Interested in discussing effects pipeline development or technical direction opportunities? I'm currently available for select consulting projects and conversations about the future of visual effects technology.
+        </p>
+        
+        <div class="flex flex-col md:flex-row justify-center gap-12">
+            <div class="md:w-1/2">
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-[#64ffda] mb-2">Name</label>
+                        <input type="text" id="name" class="bg-[#112240] border border-[#233554] rounded-md px-4 py-3 w-full focus:outline-none focus:ring-1 focus:ring-[#64ffda]" />
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-[#64ffda] mb-2">Email</label>
+                        <input type="email" id="email" class="bg-[#112240] border border-[#233554] rounded-md px-4 py-3 w-full focus:outline-none focus:ring-1 focus:ring-[#64ffda]" />
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-[#64ffda] mb-2">Message</label>
+                        <textarea id="message" rows="5" class="bg-[#112240] border border-[#233554] rounded-md px-4 py-3 w-full focus:outline-none focus:ring-1 focus:ring-[#64ffda]"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="px-6 py-3 bg-[#64ffda] text-[#0a192f] rounded-md text-sm font-medium hover:bg-[#52e0c4] transition duration-300">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="md:w-1/2 flex flex-col justify-center">
+                <div class="bg-[#112240] p-8 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-6 gradient-text">Direct Contact</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 mr-4 mt-1">
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/31ca65ea-3b47-4243-936b-ebca266d144e.png" alt="Email icon" />
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-medium mb-1">Email</h4>
+                                <a href="mailto:milinshahfx@gmail.com" class="text-[#64ffda] hover:underline">milinshahfx@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 mr-4 mt-1">
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/49813dd8-8dfb-45e9-9322-c1d0c76377ae.png" alt="LinkedIn icon" />
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-medium mb-1">LinkedIn</h4>
+                                <a href="https://linkedin.com/in/milinshahfx" target="_blank" class="text-[#64ffda] hover:underline">www.linkedin.com/in/milinshahfx</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 mr-4 mt-1">
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/566b8dca-5466-4906-b5ed-b9d50bf6babe.png" alt="ArtStation icon" />
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-medium mb-1">ArtStation</h4>
+                                <a href="https://artstation.com/janeeffectstd" target="_blank" class="text-[#64ffda] hover:underline">milinshah_fx.artstation.com</a>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-xl font-bold code-font gradient-text">Milin_Shah</span>
+                    <p class="text-gray-400 mt-2 text-sm max-w-md">
+                        Professional Effects and Crowd Technical Director specializing in high-end visual effects and simulations.
+                    </p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://github.com/ArtExotic" class="text-gray-400 hover:text-white transition">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.167 6.839 9.488.5.09.682-.218.682-.482 0-.237-.009-.867-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.94 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.268.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.833c.85.004 1.705.115 2.504.338 1.909-1.294 2.747-1.025 2.747-1.025.546 1.379.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.841-2.337 4.682-4.566 4.93.359.31.678.919.678 1.851 0 1.336-.012 2.415-.012 2.743 0 .267.18.577.688.48C19.138 20.164 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/milinshaah_official" class="text-gray-400 hover:text-white transition">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.999 7.377a4.623 4.623 0 100 9.248 4.623 4.623 0 000-9.248zm0 7.627a3.004 3.004 0 110-6.008 3.004 3.004 0 010 6.008z"></path>
+                            <circle cx="16.806" cy="7.207" r="1.078"></circle>
+                            <path d="M20.533 6.111A4.605 4.605 0 0017.9 3.479a6.606 6.606 0 00-2.186-.42c-.963-.042-1.268-.054-3.71-.054-2.438 0-2.751.012-3.707.054-.73.032-1.437.144-2.18.42-.96.343-1.74.925-2.4 1.588-.664.657-1.245 1.438-1.587 2.397-.276.746-.389 1.452-.42 2.184-.042.955-.054 1.267-.054 3.706 0 2.436.012 2.75.054 3.707.031.731.144 1.437.42 2.185.343.954.923 1.741 1.588 2.4.658.664 1.438 1.244 2.397 1.587.748.277 1.454.389 2.185.42.955.043 1.268.055 3.707.055 2.437 0 2.75-.012 3.707-.055.732-.031 1.438-.143 2.185-.42.958-.344 1.736-.921 2.396-1.587.663-.66 1.244-1.443 1.587-2.397.277-.746.391-1.454.42-2.184.042-.963.054-1.267.054-3.71 0-2.431-.015-2.755-.054-3.707a6.817 6.817 0 00-.42-2.184zm3.328 9.872a5.612 5.612 0 01-3.183 3.184 5.655 5.655 0 01-1.71.311 71.9 71.9 0 01-6.47 0 5.655 5.655 0 01-1.709-.311 5.612 5.612 0 01-3.184-3.184 5.654 5.654 0 01-.311-1.709c-.03-.92-.045-1.18-.045-3.44 0-2.259.015-3.516.045-3.439.03-.623.161-1.236.311-1.71a5.612 5.612 0 013.184-3.184 5.655 5.655 0 011.709-.311c.92-.03 1.181-.044 3.44-.044 2.266 0 3.516.016 3.44.045.623.03 1.236.161 1.71.311a5.612 5.612 0 013.183 3.184 5.654 5.654 0 01.311 1.709c.031.922.044 1.18.044 3.44 0 2.259-.016 3.516-.044 3.439a5.657 5.657 0 01-.311 1.709z"></path>
+                        </svg>
+                    </a>
+                    <a href="www.linkedin.com/in/milinshahfx" class="text-gray-400 hover:text-white transition">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://x.com/MilinShah868190" class="text-gray-400 hover:text-white transition">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.954 4.569a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.061a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.419-.015-.629a9.936 9.936 0 002.46-2.548l-.047-.02z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-12 text-center text-sm text-gray-500">
+                <p>© 2025 Effects & Crowd TD Portfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                mobileMenu.classList.add('hidden');
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    const headerOffset = 80;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Contact form submission
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // In a real implementation, you would send the form data to a server here
+                alert('Thank you for your message! I will get back to you soon.');
+                this.reset();
+            });
+        }
+    </script>
+</body>
+</html>
+
